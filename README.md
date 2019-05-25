@@ -6,6 +6,14 @@
 - Everything that was executed is registered on table DATABASECHANGELOG
 - Documentation http://www.liquibase.org/documentation/index.html
 - To execute:
-	* <b>gradle task dev update</b>
-	* <b>gradle task qa update</b>
-	* <b>gradle task prod update</b>	
+
+```bash
+gradle task liquibase update
+```
+	
+
+-rollback
+```bash
+gradle task liquibase rollback -PliquibaseCommandValue=version_1.3
+```
+
