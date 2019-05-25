@@ -15,7 +15,7 @@ buildscript {
 
 def changeLog = "./src/main/db/changelog.xml"
 
-task dev {
+task liquibase {
     println "executing dev"
 
     liquibase {
@@ -28,35 +28,7 @@ task dev {
             }
         }
     }
-}
-
-task qa {
-    println "executing qa"
-
-    liquibase {
-        activities {
-            main {
-                changeLogFile changeLog
-                url 'jdbc:postgresql://localhost:5432/liquibase_qa'
-                username 'jakob.he'
-                password 'Test!123'
-            }
-        }
+    doLast {
+        println 'executed dev!'
     }
 }
-
-task prod {
-    println "executing prod"
-
-    liquibase {
-        activities {
-            main {
-                changeLogFile changeLog
-                url 'jdbc:postgresql://localhost:5432/liquibase_prod'
-                username 'jakob.he'
-                password 'Test!123'
-            }
-        }
-    }
-}
-
