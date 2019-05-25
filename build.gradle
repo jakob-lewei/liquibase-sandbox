@@ -1,0 +1,62 @@
+apply plugin: 'liquibase'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'org.liquibase:liquibase-core:3.4.1'
+        classpath "org.liquibase:liquibase-gradle-plugin:1.1.1"
+        classpath group: 'org.postgresql', name: 'postgresql', version: '42.2.5'
+
+    }
+}
+
+def changeLog = "./src/main/db/changelog.xml"
+
+task dev {
+    println "executing dev"
+
+    liquibase {
+        activities {
+            main {
+                changeLogFile changeLog
+                url 'jdbc:postgresql://localhost:5432/liquibase_dev'
+                username 'jakob.he'
+                password 'Test!123'
+            }
+        }
+    }
+}
+
+task qa {
+    println "executing qa"
+
+    liquibase {
+        activities {
+            main {
+                changeLogFile changeLog
+                url 'jdbc:postgresql://localhost:5432/liquibase_qa'
+                username 'jakob.he'
+                password 'Test!123'
+            }
+        }
+    }
+}
+
+task prod {
+    println "executing prod"
+
+    liquibase {
+        activities {
+            main {
+                changeLogFile changeLog
+                url 'jdbc:postgresql://localhost:5432/liquibase_prod'
+                username 'jakob.he'
+                password 'Test!123'
+            }
+        }
+    }
+}
+
