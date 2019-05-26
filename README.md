@@ -12,8 +12,12 @@ gradle task liquibase update
 ```
 	
 
--rollback
+- rollback
 ```bash
 gradle task liquibase rollback -PliquibaseCommandValue=version_1.3
 ```
 
+- db doc
+```bash
+gradle task liquibase dbdoc -PliquibaseCommandValue=./liquibase/dbdoc
+```
