@@ -13,5 +13,9 @@
     <include file="scripts/006.SAMPLE.xml" relativeToChangelogFile="true"/>
     <include file="scripts/007.SAMPLE.xml" relativeToChangelogFile="true"/>
 
+    <include file="scripts/008.SAMPLE.xml" relativeToChangelogFile="true"/>
+
+    <include file="scripts/008.SAMPLE.xml" relativeToChangelogFile="true"/>
+
 </databaseChangeLog>
 

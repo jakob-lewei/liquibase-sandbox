@@ -6,7 +6,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"&gt;
 
-    &lt;changeSet id="create_person_table" author="jakob he"&gt;
+    &lt;changeSet id="create_person_table" author="jakob"&gt;
         &lt;createTable tableName="person"&gt;
             &lt;column name="id" type="int" autoIncrement="true"&gt;
                 &lt;constraints primaryKey="true" nullable="false"/&gt;
@@ -17,22 +17,23 @@
             &lt;/column&gt;
             &lt;column name="state" type="char(2)"/&gt;
         &lt;/createTable&gt;
+
     &lt;/changeSet&gt;
 
 
-    &lt;changeSet id="change_person_username_type" author="jakob he"&gt;
+    &lt;changeSet id="change_person_username_type" author="jakob"&gt;
         &lt;addColumn tableName="person"&gt;
             &lt;column name="username" type="varchar(8)"/&gt;
         &lt;/addColumn&gt;
     &lt;/changeSet&gt;
 
-    &lt;changeSet id="add_new_column_person_state" author="jakob he"&gt;
+    &lt;changeSet id="add_new_column_person_state" author="jakob"&gt;
         &lt;addLookupTable
                 existingTableName="person" existingColumnName="state"
                 newTableName="state" newColumnName="id" newColumnDataType="char(2)"/&gt;
     &lt;/changeSet&gt;
 
-    &lt;changeSet author="jakob he" id="tagDatabase-example"&gt;
+    &lt;changeSet author="jakob" id="tagDatabase-example"&gt;
         &lt;tagDatabase tag="version_1.3"/&gt;
     &lt;/changeSet&gt;
 &lt;/databaseChangeLog&gt;
