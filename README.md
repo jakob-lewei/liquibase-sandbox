@@ -21,3 +21,8 @@ gradle task liquibase rollback -PliquibaseCommandValue=version_1.3
 ```bash
 gradle task liquibase dbdoc -PliquibaseCommandValue=./liquibase/dbdoc
 ```
+
+- build liquibase in an existing db connection
+```bash
+gradle task liquibase changeLogSync
+```
