@@ -22,7 +22,7 @@ task liquibase {
         activities {
             main {
                 changeLogFile changeLog
-                url 'jdbc:postgresql://localhost:5432/liquibase_dev'
+                url 'jdbc:postgresql://localhost:5432/liquibase_sandbox'
                 username 'jakob.he'
                 password 'Test!123'
             }
