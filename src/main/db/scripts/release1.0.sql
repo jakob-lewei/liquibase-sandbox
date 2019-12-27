@@ -1,6 +1,7 @@
 --liquibase formatted sql
 
 --changeset jakob:commit1
+DROP TABLE IF EXISTS apple;
 CREATE TABLE "apple"
 (
     "id" serial,

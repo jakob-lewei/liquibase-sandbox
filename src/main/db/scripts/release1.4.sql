@@ -8,4 +8,4 @@ insert into apple (id, name) values (4, 'apple 4');
 --XXchangeset jakob:commit2
 -- alter table apple add column size smallint not null;
 --XXchangeset jakob:commit3
--- insert into apple (name) values ('apple 5');
+-- insert into apple (name, size) values ('apple 5', 9);
